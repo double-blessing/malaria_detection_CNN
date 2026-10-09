@@ -1,0 +1,25 @@
+{
+  "method": "App InputDomainGuard; frozen MobileNetV2 embedding detector",
+  "in_domain_source": "Evenly spaced sample from 20% ImageDataGenerator validation subset",
+  "in_domain_sample_per_class_requested": 100,
+  "reference_images_excluded_from_evaluation": 80,
+  "in_domain_by_class": {
+    "Parasitized": {
+      "evaluated": 100,
+      "rejected": 55,
+      "false_rejection_rate": 0.55
+    },
+    "Uninfected": {
+      "evaluated": 100,
+      "rejected": 24,
+      "false_rejection_rate": 0.24
+    }
+  },
+  "in_domain_false_rejection_rate": 0.395,
+  "ood_source": "data/ood",
+  "ood_images_found": 0,
+  "ood_false_acceptances": 0,
+  "ood_false_acceptance_rate": null,
+  "ood_rate_status": "unavailable: no OOD images were provided",
+  "medical_validation": false
+}

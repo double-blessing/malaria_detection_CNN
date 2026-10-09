@@ -1,0 +1,67 @@
+{
+  "dataset": "data/raw/cell_images",
+  "evaluation_split": "20% validation subset, matching notebook ImageDataGenerator split",
+  "class_mapping": {
+    "Parasitized": 0,
+    "Uninfected": 1
+  },
+  "images_found": 5510,
+  "models": {
+    "Custom CNN": {
+      "accuracy": 0.9368421052631579,
+      "precision": 0.9468993687337541,
+      "recall_sensitivity": 0.925589836660617,
+      "specificity": 0.9480943738656987,
+      "f1_score": 0.9361233480176211,
+      "roc_auc": 0.984443529500891,
+      "confusion_matrix": [
+        [
+          2550,
+          205
+        ],
+        [
+          143,
+          2612
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Parasitized",
+        "Uninfected"
+      ],
+      "parameters": 7392449,
+      "inference_time_seconds": 19.566556300022057,
+      "inference_time_ms_per_image": 3.551099147009448,
+      "evaluated_images": 5510,
+      "preprocessing": "RGB float pixel values divided by 255",
+      "confusion_matrix_file": "results/custom_cnn_confusion_matrix.png"
+    },
+    "MobileNetV2 Frozen": {
+      "accuracy": 0.9166969147005445,
+      "precision": 0.9477379095163807,
+      "recall_sensitivity": 0.8820326678765881,
+      "specificity": 0.9513611615245009,
+      "f1_score": 0.9137055837563451,
+      "roc_auc": 0.9737087822503878,
+      "confusion_matrix": [
+        [
+          2430,
+          325
+        ],
+        [
+          134,
+          2621
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "Parasitized",
+        "Uninfected"
+      ],
+      "parameters": 2422081,
+      "inference_time_seconds": 121.57020319999356,
+      "inference_time_ms_per_image": 22.06355774954511,
+      "evaluated_images": 5510,
+      "preprocessing": "keras.applications.mobilenet_v2.preprocess_input (0-255 RGB to -1..1)",
+      "confusion_matrix_file": "results/mobilenetv2_frozen_confusion_matrix.png"
+    }
+  }
+}
